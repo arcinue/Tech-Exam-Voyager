@@ -53,7 +53,7 @@ else	#Exit of script
 #check if critical threshold is greater than warning threshold
 	if [[ $usedMemory -ge $critThreshold ]]
 	then
-		echo "$topProcesses" | mail -s "$CURRENT_TIME memory check - critical" $email
+		echo "$topProcesses" | mail -s "$TIME memory check - critical" $email
 		exit 2
 	elif [[ $usedMemory -ge $warnThreshold ]]
 	then
